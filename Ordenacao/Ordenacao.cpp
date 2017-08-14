@@ -3,9 +3,10 @@
 #include <fstream>
 #include <cstdio>
 #include "print_vetor.hpp"
-#include "SelectionSort.hpp"//ss(x) //type(x)==vector<int>x
-#include "QuickSort.hpp"//qs(x,c,f) x vector, c int(começo) f int(fim)
-#include "BubbleSort.hpp"//bs(vector<int>x)
+#include "SelectionSort.hpp"//ss(x) //type(x) = std::vector
+#include "QuickSort.hpp"//qs(x,c,f) type(x) = std::vector, type(c) = int(começo) type(f) = int(fim)
+#include "BubbleSort.hpp"//bs(vector<int>x) type(x) = std::vector
+#include "IsertionSort.hpp"//is(x) type(x) = std::vector
 using namespace std;
 
 int main()
@@ -29,9 +30,10 @@ int main()
     file2.open("output.txt");
 //implementar heuristica aq <3
 cout<<endl<<"O tamanho do vetor eh:"<<e.size()<<endl;
-printv(e);
+printv(e);//printv() recebe um vetor de entrada e imprime seus valores sequencialmente
 vector<int>c=e;
 vector<int>b=e;
+vector<int>i=e;
 cout<<endl<<"resolvendo com quicksort:"<<endl;
 qs(c,0,c.size()-2);
 printv(c);
@@ -41,6 +43,9 @@ printv(e);
 cout<<endl<<"resolvendo com o bubblesort:"<<endl;
 bs(b);
 printv(b);
+cout<<endl<<"resolvendo com InsertionSort:"<<endl;
+is(i);
+printv(i);
 
     file.close();
     file2.close();
