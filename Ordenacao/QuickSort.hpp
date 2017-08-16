@@ -20,7 +20,7 @@ if(e!=d){
 while(e!=d){
 if(pivot==e){
 
-if(ent[pivot]<ent[d])d--;
+if(ent[pivot]<=ent[d])d--;
 else{ 
 swap(ent[pivot],ent[d]);
 pivot=d;
@@ -28,7 +28,7 @@ pivot=d;
 }
 else{//pivot != e
 
-if(ent[pivot]>ent[e])e++;
+if(ent[pivot]>=ent[e])e++;
 else{
 swap(ent[pivot],ent[e]);
 pivot=e;
