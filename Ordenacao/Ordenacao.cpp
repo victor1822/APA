@@ -9,6 +9,8 @@
 #include "IsertionSort.hpp"//is(x) type(x) = std::vector
 #include "MergeSort.hpp"
 #include "HeapSort.hpp"
+#include "CountSort.hpp"
+#include "RadixSort.hpp"
 using namespace std;
 
 int main()
@@ -43,6 +45,8 @@ vector<int>b=e;
 vector<int>i=e;
 vector<int>h=e;
 vector<int>m=e;
+vector<int>y=e;
+vector<int>r=e;
 cout<<endl<<"resolvendo com quicksort:"<<endl;
 qs(c,0,c.size()-2);
 printv(c);
@@ -61,6 +65,12 @@ printv(h);
 cout<<endl<<"resolvendo com MergeSort:"<<endl;
 ms(m,0,m.size()-2);
 printv(m);
+cout<<endl<<"resolvendo com CountSort:"<<endl;
+cs(y);
+printv(y);
+cout<<endl<<"resolvendo com RadixSort:"<<endl;
+rs(r);
+printv(r);
     file.close();
     file2.close();
 }
